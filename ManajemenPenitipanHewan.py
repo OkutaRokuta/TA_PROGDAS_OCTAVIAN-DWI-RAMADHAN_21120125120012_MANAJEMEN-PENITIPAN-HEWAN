@@ -73,7 +73,7 @@ def keluarkan_hewan():
     hewan.keluar(tanggal_aktual)
     
     pesan = f"Hewan {hewan.nama_hewan} resmi dikeluarkan.\nTanggal Dikeluarkan: {tanggal_aktual}"
-    messagebox.showinfo("Sukses Checkout", pesan)
+    messagebox.showinfo("Sukses Dikeluarkan", pesan)
     
     queue_hewan.pop(index)
     update_listbox()
