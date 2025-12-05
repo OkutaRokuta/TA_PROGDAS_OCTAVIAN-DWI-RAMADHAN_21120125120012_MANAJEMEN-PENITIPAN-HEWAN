@@ -61,15 +61,10 @@ def muat_data():
         pass
 
 
-# =======================
 # Queue
-# =======================
 queue_hewan = []
 
-
-# =======================
 # Function Tambah Hewan
-# =======================
 def tambah_hewan():
     nama_pemilik = entry_pemilik.get()
     nama_hewan = entry_hewan.get()
@@ -105,10 +100,7 @@ def tambah_hewan():
 
     update_listbox()
 
-
-# =======================
 # Function Keluarkan Hewan
-# =======================
 def keluarkan_hewan():
     selected_index = listbox.curselection()
     if not selected_index:
@@ -128,9 +120,7 @@ def keluarkan_hewan():
     update_listbox()
 
 
-# =======================
 # Update Listbox
-# =======================
 def update_listbox():
     listbox.delete(0, tk.END)
     for hewan in queue_hewan:
@@ -209,4 +199,5 @@ listbox.pack(pady=5, padx=10)
 
 muat_data()
 root.protocol("WM_DELETE_WINDOW", on_closing)
+
 root.mainloop()
